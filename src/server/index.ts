@@ -22,7 +22,9 @@ const createServer = () => {
 		for (const error of errors) {
 			const errorResponse = await error(e);
 			if (errorResponse) {
-				return Response.json(errorResponse);
+				return Response.json(errorResponse, {
+					status: 400,
+				});
 			}
 		}
 	};
@@ -87,7 +89,6 @@ const createServer = () => {
 
 					try {
 						const hasValues = pathname.split(`${route}/`)[1];
-
 						const hasParams = endpoint.path.includes(":");
 
 						if (hasValues && !hasParams) {

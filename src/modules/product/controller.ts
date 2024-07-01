@@ -1,7 +1,8 @@
-import { productService } from ".";
-import { app } from "../..";
+import { productService } from "./service";
 import { hasAuthentication } from "../../guards/authentication/has-authentication";
 import type { CreateProductDTO, UpdateProductDTO } from "./types";
+import { app } from "../..";
+import { allocUnsafe } from "bun";
 
 export const productController = () =>
 	app

@@ -1,29 +1,29 @@
 GET http://localhost:3000/brand
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJsdWNhc2RhbGFuMDlAZ21haWwuY29tIiwibmFtZSI6Ikx1Y2FzIERhbGFuIiwiaWF0IjoxNzE5ODM2MTU3fQ.hA1-exbyO_DdRaxw5jFkz2N-YuZG4Z8e-SwFeuo62hM
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJiYXRvQGhhcm1vbml0LmNvbSIsIm5hbWUiOiJiYXRvIiwiaWF0IjoxNzE5ODQwNjY3fQ.tWwXUZWm4ucBMJXCIbOOLdwCeF3CoWXFok2orkFCzH8
 
 ###
 
-GET http://localhost:3000/brand/4
+GET http://localhost:3000/brand/5
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJsdWNhc2RhbGFuMDlAZ21haWwuY29tIiwibmFtZSI6Ikx1Y2FzIERhbGFuIiwiaWF0IjoxNzE5ODM2MTU3fQ.hA1-exbyO_DdRaxw5jFkz2N-YuZG4Z8e-SwFeuo62hM
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJiYXRvQGhhcm1vbml0LmNvbSIsIm5hbWUiOiJiYXRvIiwiaWF0IjoxNzE5ODQwNjY3fQ.tWwXUZWm4ucBMJXCIbOOLdwCeF3CoWXFok2orkFCzH8
 
 ###
 
 POST http://localhost:3000/brand
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJsdWNhc2RhbGFuMDlAZ21haWwuY29tIiwibmFtZSI6Ikx1Y2FzIERhbGFuIiwiaWF0IjoxNzE5ODM2MTU3fQ.hA1-exbyO_DdRaxw5jFkz2N-YuZG4Z8e-SwFeuo62hM
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJiYXRvQGhhcm1vbml0LmNvbSIsIm5hbWUiOiJiYXRvIiwiaWF0IjoxNzE5ODQwNjY3fQ.tWwXUZWm4ucBMJXCIbOOLdwCeF3CoWXFok2orkFCzH8
 
 {
   "code": 10,
-  "description": "DALO"
+  "description": "marca beto"
 }
 
 ###
 
 PUT http://localhost:3000/brand/2
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJsdWNhc2RhbGFuMDlAZ21haWwuY29tIiwibmFtZSI6Ikx1Y2FzIERhbGFuIiwiaWF0IjoxNzE5ODM2MTU3fQ.hA1-exbyO_DdRaxw5jFkz2N-YuZG4Z8e-SwFeuo62hM
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJiYXRvQGhhcm1vbml0LmNvbSIsIm5hbWUiOiJiYXRvIiwiaWF0IjoxNzE5ODQwNjY3fQ.tWwXUZWm4ucBMJXCIbOOLdwCeF3CoWXFok2orkFCzH8
 
 {
   "description": "GA milicias"
@@ -33,4 +33,4 @@ Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiO
 
 DELETE http://localhost:3000/brand/1
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJsdWNhc2RhbGFuMDlAZ21haWwuY29tIiwibmFtZSI6Ikx1Y2FzIERhbGFuIiwiaWF0IjoxNzE5ODM2MTU3fQ.hA1-exbyO_DdRaxw5jFkz2N-YuZG4Z8e-SwFeuo62hM
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJiYXRvQGhhcm1vbml0LmNvbSIsIm5hbWUiOiJiYXRvIiwiaWF0IjoxNzE5ODQwNjY3fQ.tWwXUZWm4ucBMJXCIbOOLdwCeF3CoWXFok2orkFCzH8

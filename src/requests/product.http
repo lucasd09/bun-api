@@ -1,28 +1,31 @@
 GET http://localhost:3000/product
 Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJiYXRvQGhhcm1vbml0LmNvbSIsIm5hbWUiOiJiYXRvIiwiaWF0IjoxNzE5ODQwNjY3fQ.tWwXUZWm4ucBMJXCIbOOLdwCeF3CoWXFok2orkFCzH8
 
 ###
 
 GET http://localhost:3000/product/1
 Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJiYXRvQGhhcm1vbml0LmNvbSIsIm5hbWUiOiJiYXRvIiwiaWF0IjoxNzE5ODQwNjY3fQ.tWwXUZWm4ucBMJXCIbOOLdwCeF3CoWXFok2orkFCzH8
 
 ###
 
 POST http://localhost:3000/product
 Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJiYXRvQGhhcm1vbml0LmNvbSIsIm5hbWUiOiJiYXRvIiwiaWF0IjoxNzE5ODQwNjY3fQ.tWwXUZWm4ucBMJXCIbOOLdwCeF3CoWXFok2orkFCzH8
 
 {
-  "code": 10,
-  "name": "Não",
-  "price": 57.100000000,
-  "userId": 5,
-  "brandId": 3
+  "code": 100,
+  "name": "poduto",
+  "price": 58.97,
+  "brandId": 5
 }
 
 ###
 
-PUT http://localhost:3000/product/1
+PUT http://localhost:3000/product/6
 Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJiYXRvQGhhcm1vbml0LmNvbSIsIm5hbWUiOiJiYXRvIiwiaWF0IjoxNzE5ODQwNjY3fQ.tWwXUZWm4ucBMJXCIbOOLdwCeF3CoWXFok2orkFCzH8
 
 {
   "name": "Facão do GA"

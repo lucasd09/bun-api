@@ -50,7 +50,7 @@ export const productService = {
 			const updatedValue = (
 				await db
 					.update(products)
-					.set({ name: updatedProduct.name })
+					.set(updatedProduct)
 					.where(eq(products.id, id))
 					.returning()
 			)[0];
