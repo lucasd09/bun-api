@@ -1,20 +1,21 @@
-import { eq } from "drizzle-orm";
+import { and, eq } from "drizzle-orm";
 import { db } from "../../database";
 import { brands } from "../../database/schemas";
 import { baseService } from "../base";
 import type { BrandEntity, CreateBrandDTO, UpdateBrandDTO } from "./types";
+import type { UserToken } from "../auth/types";
 
 export const brandService = {
 	...baseService(brands),
-	create: async (inputBrand: CreateBrandDTO) => {
-		const { code, description, userId } = inputBrand;
+	create: async (inputBrand: CreateBrandDTO, token: UserToken) => {
+		const { code, description } = inputBrand;
 		try {
-			if (!userId) {
+			if (!token.id) {
 				throw new Error("userId não informado");
 			}
 
 			const codeExists = await db.query.brands.findFirst({
-				where: eq(brands.code, code),
+				where: and(eq(brands.code, code), eq(brands.userId, token.id)),
 			});
 
 			if (codeExists) {
@@ -24,7 +25,7 @@ export const brandService = {
 			const createdBrand = (
 				await db
 					.insert(brands)
-					.values({ code, description, userId })
+					.values({ code, description, userId: token.id })
 					.returning()
 			)[0];
 

@@ -12,11 +12,11 @@ POST http://localhost:3000/product
 Content-Type: application/json
 
 {
-  "code": 3,
-  "name": "Laranja do GA",
-  "price": 57.10,
-  "userId": 3,
-  "brandId": 2
+  "code": 10,
+  "name": "Não",
+  "price": 57.100000000,
+  "userId": 5,
+  "brandId": 3
 }
 
 ###
@@ -30,5 +30,5 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3000/product/3
+DELETE http://localhost:3000/product/2
 Content-Type: application/json

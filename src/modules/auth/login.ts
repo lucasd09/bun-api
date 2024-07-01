@@ -15,7 +15,10 @@ export const loginService = async (req: Request) => {
 		throw new Error("usuario não encontrado");
 	}
 
-	const passwordMatches = Bun.password.verify(password, userFound.password);
+	const passwordMatches = await Bun.password.verify(
+		password,
+		userFound.password,
+	);
 	if (!passwordMatches) {
 		throw new Error("senha incorreta");
 	}

@@ -69,11 +69,11 @@ const createServer = () => {
 			fetch: async (request) => {
 				const { pathname } = new URL(request.url);
 				const method = request.method;
+				const headers = request.headers;
+
 				const splittedRoute = pathname.split("/");
 				const route = splittedRoute[1];
 
-				// /login POST
-				// /login POST
 				for (const endpoint of endpoints) {
 					const routeMatches = endpoint.path.includes(route);
 

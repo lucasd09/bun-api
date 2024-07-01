@@ -7,13 +7,14 @@ import type {
 	UpdateProductDTO,
 	ProductEntity,
 } from "./types";
+import type { UserToken } from "../auth/types";
 
 export const productService = {
 	...baseService(products),
-	create: async (inputProduct: CreateProductDTO) => {
-		const { code, name, userId, price, brandId } = inputProduct;
+	create: async (inputProduct: CreateProductDTO, token: UserToken) => {
+		const { code, name, price, brandId } = inputProduct;
 		try {
-			if (!userId) {
+			if (!token.id) {
 				throw new Error("userId não informado");
 			}
 
@@ -28,7 +29,7 @@ export const productService = {
 			const createdProduct = (
 				await db
 					.insert(products)
-					.values({ code, name, price, userId, brandId })
+					.values({ code, name, price, userId: token.id, brandId })
 					.returning()
 			)[0];
 
